@@ -319,6 +319,34 @@ paths:
                                             $ref: "#/components/schemas/userSmall"
                 403:
                     description: forbidden
+
+    /creators/articles/{categoryId}:
+        parameters:
+            - name: categoryId
+              in: path
+              required: true
+              schema:
+                  $ref: "#/components/schemas/articleCategoryId"
+        get:
+            summary: Gets all articles corresponding to `categoryId`
+            description: Gets all articles corresponding to `categoryId`. Sorted by newest
+            parameters:
+                - name: search
+                  description: Search query
+                  in: query
+                  schema:
+                    type: string
+
+            responses:
+                200:
+                    description: List of articles
+                    content:
+                        application/json:
+                                schema:
+                                    type: array
+                                    items:
+                                        $ref: "#/components/schemas/articleListCard"
+            
     /users:
         get:
             summary: Search for users
