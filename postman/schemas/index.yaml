@@ -196,6 +196,15 @@ paths:
               required: true
               schema:
                   $ref: "#/components/schemas/articleCategoryId"
+        get:
+            summary: get a category
+            responses:
+                "200":
+                    description: The requested category
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/articleCategory"
         put:
             summary: Edit a category
             description: Can only be done by admin
