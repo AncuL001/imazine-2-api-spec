@@ -175,7 +175,7 @@ paths:
                     "multipart/form-data":
                         schema:
                             properties:
-                                category_name:
+                                name:
                                     description: Category name
                                     type: string
             responses:
@@ -213,7 +213,7 @@ paths:
                     "multipart/form-data":
                         schema:
                             properties:
-                                category_name:
+                                name:
                                     description: New category name
                                     type: string
             responses:
