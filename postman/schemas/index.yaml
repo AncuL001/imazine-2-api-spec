@@ -403,7 +403,7 @@ paths:
               required: true
               schema:
                   $ref: "#/components/schemas/userId"
-        post:
+        put:
             summary: Edit an user
             requestBody:
                 content:
