@@ -367,7 +367,7 @@ paths:
                                 type: array
                                 items:
                                     $ref: "#/components/schemas/userSmall"
-    /users/profile-picture:
+    /profile/profile-picture:
         post:
             summary: Upload a new profile picture
             requestBody:
