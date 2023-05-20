@@ -418,6 +418,8 @@ paths:
                                     type: string
                                 name:
                                     type: string
+                                email:
+                                    type: string
             responses:
                  "200":
                     description: Adding user successful
