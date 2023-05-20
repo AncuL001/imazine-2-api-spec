@@ -381,6 +381,31 @@ paths:
             responses:
                 200:
                     description: Changing profile picture successful
+    /profile/password:
+        post:
+            summary: Change password
+            requestBody:
+                content:
+                    "multipart/form-data":
+                        schema:
+                            properties:
+                                oldPassword:
+                                    type: string
+                                newPassword:
+                                    type: string
+                                repeatNewPassword:
+                                    type: string
+            responses:
+                200:
+                    description: Changing password successful
+                400:
+                    description: oldPassword might not match old password or newPassword might not match repeatNewPassword
+                    content:
+                        application/json:
+                            schema:
+                                properties:
+                                    message:
+                                        type: string
     /admin/users:
         post:
             summary: Add an user
