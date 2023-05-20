@@ -406,6 +406,19 @@ paths:
                                 properties:
                                     message:
                                         type: string
+    /profile:
+        put:
+            summary: Change profile data
+            requestBody:
+                content:
+                    "multipart/form-data":
+                        schema:
+                            properties:
+                                email:
+                                    type: string
+            responses:
+                200:
+                    description: Changing password successful
     /admin/users:
         post:
             summary: Add an user
